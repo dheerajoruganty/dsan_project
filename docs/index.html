@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollama with Plotly</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/2.2.0/scrollama.min.js"></script>
+</head>
+<body>
+    <div class="video-background" id="section1-background">
+        <video id="backgroundVideo" muted>
+            <source src="utah.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <!-- First section with intro text only -->
+        <section class="section step" id="section1">
+            <div class="center-div">
+                <div class="intro-text">
+                    <h1>Welcome to the Project</h1>
+                    <p>This project explores various aspects of data-driven policing and interactive crime trends analysis in LA.</p>
+                </div>
+            </div>
+         
+        </section>
+
+        <!-- Second section with text on the left and plot on the right -->
+        <section class="section dark-background step" id="section2">
+            <div class="lightbox">
+                <div class="text">
+                    <div class="description">
+                        <h2>Summer Temperature Over the Years</h2>
+                        <p>This visualization illustrates the summer temperature distribution for the year 2021 in the Dark Canyon Wilderness area. The 3D map overlay highlights temperature variations, with a color gradient indicating different temperature ranges in degrees Celsius. The hottest regions, shown in red and orange, reach temperatures up to 26°C, while cooler areas, displayed in blue, experience temperatures as low as 21°C. This detailed spatial representation helps in understanding how temperature varies across the landscape, potentially impacting local vegetation and ecosystems. The slider at the bottom suggests that this is part of a time-series analysis, allowing users to explore temperature changes over multiple years, although only 2021 is currently displayed. This visualization is crucial for identifying trends and patterns in climate data, which can inform environmental management and conservation strategies.</p>
+                    </div>
+                </div>
+                <div class="plot">
+                    <iframe src="plot2.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fifth section with plot on the left and text on the right -->
+        <section class="section dark-background step" id="section5">
+            <div class="lightbox reverse">
+                <div class="plot">
+                    <iframe src="Drought_Summer1.html" frameborder="0"></iframe>
+                </div>
+                <div class="text">
+                    <div class="description">
+                        <h2>Regression Summer</h2>
+                        <p>This section provides further insights and visualizations on crime trends in LA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fourth section with text on the left and plot on the right -->
+        <section class="section dark-background step" id="section4">
+            <div class="lightbox">
+                <div class="text">
+                    <div class="description">
+                        <h2>Corr Summer</h2>
+                        <p>More analysis and visualizations on other aspects of crime trends in LA.</p>
+                    </div>
+                </div>
+                <div class="plot">
+                    <iframe src="Corr_Summer.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fifth section with plot on the left and text on the right -->
+        <section class="section dark-background step" id="section5">
+            <div class="lightbox reverse">
+                <div class="plot">
+                    <iframe src="Regression_Summer.html" frameborder="0"></iframe>
+                </div>
+                <div class="text">
+                    <div class="description">
+                        <h2>Regression Summer</h2>
+                        <p>This section provides further insights and visualizations on crime trends in LA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sixth section with text on the left and plot on the right -->
+        <section class="section dark-background step" id="section6">
+            <div class="lightbox">
+                <div class="text">
+                    <div class="description">
+                        <h2>Corr Winter</h2>
+                        <p>This section delves deeper into crime trends with comprehensive visualizations.</p>
+                    </div>
+                </div>
+                <div class="plot">
+                    <iframe src="corr_winter.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seventh section with plot on the left and text on the right -->
+        <section class="section dark-background step" id="section7">
+            <div class="lightbox reverse">
+                <div class="plot">
+                    <iframe src="Reg_Winter.html" frameborder="0"></iframe>
+                </div>
+                <div class="text">
+                    <div class="description">
+                        <h2>Reg Winter</h2>
+                        <p>This section offers comprehensive insights into various crime trends in LA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eighth section with text on the left and plot on the right -->
+        <section class="section dark-background step" id="section8">
+            <div class="lightbox">
+                <div class="text">
+                    <div class="description">
+                        <h2>Detailed Analysis</h2>
+                        <p>This section provides detailed visualizations on specific crime trends in LA.</p>
+                    </div>
+                </div>
+                <div class="plot">
+                    <iframe src="plot8.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ninth section with plot on the left and text on the right -->
+        <section class="section dark-background step" id="section9">
+            <div class="lightbox reverse">
+                <div class="plot">
+                    <iframe src="plot9.html" frameborder="0"></iframe>
+                </div>
+                <div class="text">
+                    <div class="description">
+                        <h2>Extensive Insights</h2>
+                        <p>This section offers extensive insights and visualizations on various crime trends in LA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tenth section with text on the left and plot on the right -->
+        <section class="section dark-background step" id="section10">
+            <div class="lightbox">
+                <div class="text">
+                    <div class="description">
+                        <h2>Final Analysis</h2>
+                        <p>This final section concludes the analysis with comprehensive visualizations on crime trends in LA.</p>
+                    </div>
+                </div>
+                <div class="plot">
+                    <iframe src="plot10.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
