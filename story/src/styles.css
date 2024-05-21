@@ -1,3 +1,40 @@
+/* Define color palettes */
+:root {
+    --blue-light: rgb(0, 122, 255);
+    --orange-light: rgb(255, 149, 0);
+    --green-light: rgb(52, 199, 89);
+    --red-light: rgb(255, 59, 48);
+    --purple-light: rgb(175, 82, 222);
+    --pink-light: rgb(255, 45, 85);
+    --indigo-light: rgb(88, 86, 214);
+    --teal-light: rgb(90, 200, 250);
+    --yellow-light: rgb(255, 204, 0);
+
+    --blue-dark: rgb(10, 132, 255);
+    --orange-dark: rgb(255, 159, 10);
+    --green-dark: rgb(48, 209, 88);
+    --red-dark: rgb(255, 69, 58);
+    --purple-dark: rgb(191, 90, 242);
+    --pink-dark: rgb(255, 55, 95);
+    --indigo-dark: rgb(94, 92, 230);
+    --teal-dark: rgb(100, 210, 255);
+    --yellow-dark: rgb(255, 214, 10);
+
+    --gray-light-1: rgb(142, 142, 147);
+    --gray-light-2: rgb(174, 174, 178);
+    --gray-light-3: rgb(199, 199, 204);
+    --gray-light-4: rgb(209, 209, 214);
+    --gray-light-5: rgb(229, 229, 234);
+    --gray-light-6: rgb(242, 242, 247);
+
+    --gray-dark-1: rgb(142, 142, 147);
+    --gray-dark-2: rgb(99, 99, 102);
+    --gray-dark-3: rgb(72, 72, 74);
+    --gray-dark-4: rgb(58, 58, 60);
+    --gray-dark-5: rgb(44, 44, 46);
+    --gray-dark-6: rgb(28, 28, 30);
+}
+
 /* Basic styles */
 body, html {
     margin: 0;
@@ -38,7 +75,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 780px;
     padding: 20px;
     opacity: 0;
     transform: translateY(20px);
@@ -51,31 +88,32 @@ body, html {
 }
 
 .dark-background {
-    background-color: #333;
+    background-color: var(--gray-dark-5);
     color: white;
 }
 
 body.dark-mode .section:not(.dark-background) {
-    background-color: #333;
+    background-color: var(--gray-dark-5);
     color: white;
 }
 
 .step.is-active {
-    border: 2px solid red;
+    border: 2px solid var(--red-dark);
 }
 
-.lightbox {
+.container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
-    height: 80vh;
+    max-width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
+    gap: 20px;
 }
 
-.lightbox.reverse {
+.reverse .container {
     flex-direction: row-reverse;
 }
 
@@ -90,10 +128,9 @@ body.dark-mode .section:not(.dark-background) {
 
 .plot iframe {
     width: 100%;
-    height: 780px;
-    border-radius: 10px;
+    height: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: var(--gray-light-6);
 }
 
 .description {
@@ -107,9 +144,9 @@ body.dark-mode .section:not(.dark-background) {
 }
 
 h1, h2 {
-    color: white;
+    color: rgb(12, 0, 0);
 }
 
 p {
-    color: white;
+    color: rgb(14, 0, 0);
 }
