@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .setup({
             step: ".step",
             offset: 0.5,
-            debug: true
+            debug: false
         })
         .onStepEnter(response => {
             const element = response.element;
