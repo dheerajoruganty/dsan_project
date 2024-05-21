@@ -44,3 +44,5 @@ https://geographicdata.science/book/notebooks/11_regression.html
 https://plotly.com/python/mapbox-density-heatmaps/
 
 https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/a-meaningful-temperature-palette/
+
+https://github.com/chriswhong/awesome-mapbox-webmaps?tab=readme-ov-file

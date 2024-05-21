@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrollytelling with Plotly</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+        }
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<section id="landing-page">
+    <div id="map"></div>
+</section>
+
+<section id="plot1">
+    <iframe src="plot1.html"></iframe>
+</section>
+
+<section id="plot2">
+    <iframe src="plot2.html"></iframe>
+</section>
+
+<section id="plot3">
+    <iframe src="plot3.html"></iframe>
+</section>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/2.2.1/scrollama.min.js"></script>
+<script>
+    // Initialize the animated map plot in the landing section
+    const mapData = [{
+        type: 'scattergeo',
+        mode: 'markers+text',
+        text: ['Location 1', 'Location 2', 'Location 3'],
+        lon: [-77.0369, -80.1918, -74.0060],
+        lat: [38.9072, 25.7617, 40.7128],
+        marker: { size: 8 }
+    }];
+
+    const mapLayout = {
+        title: 'Animated Map',
+        geo: {
+            scope: 'usa',
+            projection: { type: 'albers usa' },
+            showland: true,
+            landcolor: 'rgb(217, 217, 217)',
+            subunitwidth: 1,
+            countrywidth: 1,
+            subunitcolor: 'rgb(255,255,255)',
+            countrycolor: 'rgb(255,255,255)'
+        }
+    };
+
+    Plotly.newPlot('map', mapData, mapLayout);
+
+    // Animation code for the map (example: move marker)
+    let i = 0;
+    const interval = setInterval(() => {
+        mapData[0].lon = mapData[0].lon.map(lon => lon + (i % 2 === 0 ? 0.1 : -0.1));
+        Plotly.redraw('map');
+        i++;
+        if (i > 20) clearInterval(interval);
+    }, 1000);
+
+    // Initialize Scrollama
+    const scroller = scrollama();
+
+    scroller
+        .setup({
+            step: 'section',
+            offset: 0.5,
+            debug: false
+        })
+        .onStepEnter(response => {
+            const { index, element } = response;
+            console.log('enter:', index);
+            // Trigger animations or load content based on the section
+            switch(index) {
+                case 1:
+                    // Animation or actions for plot1
+                    console.log('Plot 1 section entered');
+                    break;
+                case 2:
+                    // Animation or actions for plot2
+                    console.log('Plot 2 section entered');
+                    break;
+                case 3:
+                    // Animation or actions for plot3
+                    console.log('Plot 3 section entered');
+                    break;
+            }
+        })
+        .onStepExit(response => {
+            const { index, element } = response;
+            console.log('exit:', index);
+        });
+
+    // Resize function
+    window.addEventListener('resize', scroller.resize);
+</script>
+
+</body>
+</html>
